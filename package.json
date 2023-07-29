@@ -1,0 +1,14 @@
+{
+  "name": "@wongxy/eslint-config",
+  "version": "0.0.2",
+  "description": "xiyaowong's eslint config",
+  "author": "xiyaowong (https://github.com/xiyaowong)",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ]
+}
