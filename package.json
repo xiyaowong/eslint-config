@@ -1,6 +1,6 @@
 {
   "name": "@wongxy/eslint-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "xiyaowong's eslint config",
   "author": "xiyaowong (https://github.com/xiyaowong)",
   "license": "MIT",
@@ -10,5 +10,8 @@
   "main": "index.js",
   "files": [
     "index.js"
-  ]
+  ],
+  "dependencies": {
+    "@antfu/eslint-config": "^1.0.0"
+  }
 }
