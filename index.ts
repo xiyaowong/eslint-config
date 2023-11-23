@@ -5,7 +5,10 @@ function wongxy(options?: OptionsConfig & FlatConfigItem, ...userConfigs: Awaita
   return antfu(options, {
     rules: {
       'no-console': 'off',
+      'no-alert': 'off',
       'no-multiple-empty-lines': 'warn',
+      'curly': ['error', 'all'],
+      'antfu/top-level-function': 'off',
     },
   }, {
     files: ['**/*.vue'],
@@ -15,6 +18,7 @@ function wongxy(options?: OptionsConfig & FlatConfigItem, ...userConfigs: Awaita
       'vue/block-order': ['warn', {
         order: [['script', 'template'], 'style'],
       }],
+      'vue/custom-event-name-casing': 'off',
     },
   }, ...userConfigs)
 }
