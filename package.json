@@ -5,7 +5,13 @@
   "description": "xiyaowong's eslint config",
   "author": "xiyaowong (https://github.com/xiyaowong)",
   "license": "MIT",
-  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
