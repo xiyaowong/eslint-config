@@ -7,7 +7,6 @@ function wongxy(options?: OptionsConfig & FlatConfigItem, ...userConfigs: Awaita
       'no-console': 'off',
       'no-alert': 'off',
       'no-multiple-empty-lines': 'warn',
-      'curly': ['error', 'all'],
       'antfu/top-level-function': 'off',
     },
   }, {
