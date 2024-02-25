@@ -12,7 +12,9 @@
     }
   },
   "main": "dist/index.js",
+  "bin": "bin/index.js",
   "files": [
+    "bin",
     "dist"
   ],
   "scripts": {
@@ -26,10 +28,16 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@antfu/eslint-config": "latest"
+    "@antfu/eslint-config": "latest",
+    "parse-gitignore": "^2.0.0",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "yargs": "^17.7.2"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.7",
+    "@types/prompts": "^2.4.9",
+    "@types/yargs": "^17.0.32",
     "bumpp": "9.2.0",
     "eslint": "8.54.0",
     "tsup": "8.0.1",
