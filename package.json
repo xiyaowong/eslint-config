@@ -34,7 +34,7 @@
   "peerDependencies": {
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4"
+    "eslint-plugin-react-refresh": "^0.4.5"
   },
   "dependencies": {
     "@antfu/eslint-config": "latest",
@@ -44,12 +44,20 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@types/eslint": "^8.44.7",
+    "@antfu/eslint-config": "^2.6.4",
+    "@types/eslint": "^8.56.3",
     "@types/prompts": "^2.4.9",
     "@types/yargs": "^17.0.32",
-    "bumpp": "9.2.0",
-    "eslint": "8.54.0",
-    "tsup": "8.0.1",
-    "typescript": "5.2.2"
+    "bumpp": "^9.3.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "parse-gitignore": "^2.0.0",
+    "picocolors": "^1.0.0",
+    "prompts": "^2.4.2",
+    "tsup": "^8.0.2",
+    "typescript": "5.2.2",
+    "yargs": "^17.7.2"
   }
 }
