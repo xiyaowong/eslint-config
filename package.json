@@ -12,7 +12,11 @@
     }
   },
   "main": "dist/index.js",
-  "bin": "bin/index.js",
+  "bin": {
+    "@wongxy/eslint-config": "bin/index.js",
+    "eslint-config": "bin/index.js",
+    "wongxy-eslint-config": "bin/index.js"
+  },
   "files": [
     "bin",
     "dist"
