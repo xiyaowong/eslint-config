@@ -31,6 +31,11 @@
     "release": "bumpp && pnpm publish",
     "typecheck": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4"
+  },
   "dependencies": {
     "@antfu/eslint-config": "latest",
     "parse-gitignore": "^2.0.0",
