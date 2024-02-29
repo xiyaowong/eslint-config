@@ -74,9 +74,65 @@ export async function run(options: RuleOptions = {}) {
     }
   }
 
-  let eslintConfigContent: string = ''
+  const configs = []
+  if (eslintIgnores.length)
+    configs.push(`  ignores: ${JSON.stringify(eslintIgnores)},`)
 
-  const wongxyConfig = `${eslintIgnores.length ? `ignores: ${JSON.stringify(eslintIgnores)}` : ''}`
+  if (!SKIP_PROMPT) {
+    let enableReactNativeRulesPrompt: prompts.Answers<'enableReactNativeRules'> = {
+      enableReactNativeRules: false,
+    }
+    // Enable React Native rules
+    try {
+      enableReactNativeRulesPrompt = await prompts({
+        initial: false,
+        message: 'Enable React Native rules?',
+        name: 'enableReactNativeRules',
+        type: 'confirm',
+      }, {
+        onCancel: () => {
+          throw new Error(`Cancelled`)
+        },
+      })
+    }
+    catch (cancelled: any) {
+      console.log(cancelled.message)
+      return
+    }
+
+    if (enableReactNativeRulesPrompt.enableReactNativeRules)
+      configs.push(`  reactnative: true,`)
+
+    // Enable React rules
+    if (!enableReactNativeRulesPrompt.enableReactNativeRules) {
+      let enableReactRulesPrompt: prompts.Answers<'enableReactRules'> = {
+        enableReactRules: false,
+      }
+      try {
+        enableReactRulesPrompt = await prompts({
+          initial: false,
+          message: 'Enable React rules?',
+          name: 'enableReactRules',
+          type: 'confirm',
+        }, {
+          onCancel: () => {
+            throw new Error(`Cancelled`)
+          },
+        })
+      }
+      catch (cancelled: any) {
+        console.log(cancelled.message)
+        return
+      }
+
+      if (enableReactRulesPrompt.enableReactRules)
+        configs.push(`  react: true,`)
+    }
+  }
+
+  const wongxyConfig = configs.join('\n')
+
+  let eslintConfigContent: string = ''
   if (pkg.type === 'module') {
     eslintConfigContent = `
 import wongxy from '@wongxy/eslint-config'
