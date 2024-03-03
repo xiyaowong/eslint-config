@@ -1,7 +1,7 @@
 {
   "name": "@wongxy/eslint-config",
   "type": "module",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "xiyaowong's eslint config",
   "author": "xiyaowong (https://github.com/xiyaowong)",
   "license": "MIT",
