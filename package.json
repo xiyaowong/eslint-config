@@ -13,8 +13,9 @@
   },
   "main": "dist/index.js",
   "bin": {
-    "@wongxy/eslint-config": "bin/index.js",
     "eslint-config": "bin/index.js",
+    "eslint-config-wongxy": "bin/index.js",
+    "wongxy-eslint": "bin/index.js",
     "wongxy-eslint-config": "bin/index.js"
   },
   "files": [
