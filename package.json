@@ -29,6 +29,7 @@
     "lint:fix": "pnpm run stub && eslint . --fix",
     "prepack": "pnpm run build",
     "release": "bumpp && pnpm publish",
+    "preview": "eslint-flat-config-viewer",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -50,6 +51,7 @@
     "@types/yargs": "^17.0.32",
     "bumpp": "^9.3.0",
     "eslint": "^8.57.0",
+    "eslint-flat-config-viewer": "^0.1.11",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
