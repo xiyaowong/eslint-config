@@ -39,7 +39,7 @@
     "eslint-plugin-react-refresh": "^0.4.5"
   },
   "dependencies": {
-    "@antfu/eslint-config": "latest",
+    "@antfu/eslint-config": "^2.7.0",
     "parse-gitignore": "^2.0.0",
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2",
@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.4",
-    "@types/eslint": "^8.56.3",
+    "@types/eslint": "^8.56.5",
     "@types/prompts": "^2.4.9",
     "@types/yargs": "^17.0.32",
     "bumpp": "^9.3.0",
