@@ -11,6 +11,7 @@ function wongxy(
   const configs: typeof userConfigs = []
   configs.push(
     {
+      name: 'wongxy:general',
       rules: {
         'no-console': 'off',
         'no-alert': 'off',
@@ -21,6 +22,7 @@ function wongxy(
   )
   if (options?.vue) {
     configs.push({
+      name: 'wongxy:vue',
       files: ['**/*.vue'],
       rules: {
         'vue/singleline-html-element-content-newline': 'off',
@@ -34,6 +36,7 @@ function wongxy(
   }
   if (reactnative) {
     configs.push({
+      name: 'wongxy:reactnative',
       rules: {
         'ts/no-require-imports': 'off',
         'ts/no-use-before-define': 'off',
