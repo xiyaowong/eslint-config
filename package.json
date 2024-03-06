@@ -34,9 +34,9 @@
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5"
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-refresh": "*"
   },
   "dependencies": {
     "@antfu/eslint-config": "^2.7.0",
@@ -46,7 +46,6 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.6.4",
     "@types/eslint": "^8.56.5",
     "@types/prompts": "^2.4.9",
     "@types/yargs": "^17.0.32",
