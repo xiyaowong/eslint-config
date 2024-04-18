@@ -1,10 +1,22 @@
-import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
+import type {
+  Awaitable,
+  ConfigNames,
+  OptionsConfig,
+  TypedFlatConfigItem,
+} from '@antfu/eslint-config'
 import { antfu } from '@antfu/eslint-config'
+import type { Linter } from 'eslint'
+import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 
 function wongxy(
-  options?: OptionsConfig & FlatConfigItem & { reactnative?: boolean },
-  ...userConfigs: Awaitable<UserConfigItem | UserConfigItem[]>[]
-) {
+  options?: OptionsConfig & TypedFlatConfigItem & { reactnative?: boolean },
+  ...userConfigs: Awaitable<
+    | TypedFlatConfigItem
+    | TypedFlatConfigItem[]
+    | FlatConfigComposer<any, any>
+    | Linter.FlatConfig[]
+  >[]
+): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const reactnative = options?.reactnative
   const react = options?.react || reactnative
 
