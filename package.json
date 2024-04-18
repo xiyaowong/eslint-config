@@ -50,13 +50,13 @@
     "@types/prompts": "^2.4.9",
     "@types/yargs": "^17.0.32",
     "bumpp": "^9.3.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "eslint-flat-config-viewer": "^0.1.11",
     "parse-gitignore": "^2.0.0",
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2",
     "tsup": "^8.0.2",
-    "typescript": "5.4.2",
+    "typescript": "5.4.5",
     "yargs": "^17.7.2"
   }
 }
