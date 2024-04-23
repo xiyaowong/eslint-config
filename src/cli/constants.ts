@@ -1,4 +1,5 @@
 import c from 'picocolors'
+
 import { devDependencies, version } from '../../package.json'
 
 export const ARROW = c.cyan('→')

@@ -1,9 +1,11 @@
 import process from 'node:process'
+
 import c from 'picocolors'
-import { hideBin } from 'yargs/helpers'
 import yargs from 'yargs'
-import { run } from './run'
+import { hideBin } from 'yargs/helpers'
+
 import { CROSS, version } from './constants'
+import { run } from './run'
 
 function header() {
   console.log(`\n${c.green(`@wongxy/eslint-config `)}${c.dim(`v${version}`)}`)
