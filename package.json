@@ -12,14 +12,7 @@
     }
   },
   "main": "dist/index.js",
-  "bin": {
-    "eslint-config": "bin/index.js",
-    "eslint-config-wongxy": "bin/index.js",
-    "wongxy-eslint": "bin/index.js",
-    "wongxy-eslint-config": "bin/index.js"
-  },
   "files": [
-    "bin",
     "dist"
   ],
   "scripts": {
@@ -33,30 +26,15 @@
     "preview": "eslint-flat-config-viewer",
     "typecheck": "tsc --noEmit"
   },
-  "peerDependencies": {
-    "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks": "*",
-    "eslint-plugin-react-refresh": "*"
-  },
   "dependencies": {
-    "@antfu/eslint-config": "^2.7.0",
-    "parse-gitignore": "^2.0.0",
-    "picocolors": "^1.0.0",
-    "prompts": "^2.4.2",
-    "yargs": "^17.7.2"
+    "@antfu/eslint-config": "^2.15.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.5",
-    "@types/prompts": "^2.4.9",
-    "@types/yargs": "^17.0.32",
     "bumpp": "^9.3.0",
     "eslint": "^9.0.0",
     "eslint-flat-config-viewer": "^0.1.11",
-    "parse-gitignore": "^2.0.0",
-    "picocolors": "^1.0.0",
-    "prompts": "^2.4.2",
     "tsup": "^8.0.2",
-    "typescript": "5.4.5",
-    "yargs": "^17.7.2"
+    "typescript": "5.4.5"
   }
 }

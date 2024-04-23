@@ -5,9 +5,14 @@ Personal ESLint configuration, based on `@antfu/eslint-config`
 ## Usage
 
 ```bash
-npm i eslint @wongxy/eslint-config -D
+pnpm i -D eslint @antfu/eslint-config
 ```
 
-```bash
-npx wongxy-eslint-config
+And create `eslint.config.mjs` in your project root:
+
+```js
+// eslint.config.mjs
+import wongxy from '@wongxy/eslint-config'
+
+export default wongxy()
 ```
