@@ -30,8 +30,7 @@ function wongxy(
         'no-multiple-empty-lines': 'warn',
         'antfu/top-level-function': 'off',
         'import/order': ['error', {
-          'newlines-between': 'always-and-inside-groups',
-          'alphabetize': { order: 'asc' },
+          'newlines-between': 'always-and-inside-groups'
         }],
       },
     },
