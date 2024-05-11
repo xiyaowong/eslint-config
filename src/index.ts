@@ -8,6 +8,8 @@ import { antfu } from '@antfu/eslint-config'
 import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 
+import pluginWongxy from './plugin-wongxy'
+
 function wongxy(
   options?: OptionsConfig & TypedFlatConfigItem & { reactnative?: boolean },
   ...userConfigs: Awaitable<
@@ -30,8 +32,9 @@ function wongxy(
         'no-multiple-empty-lines': 'warn',
         'antfu/top-level-function': 'off',
         'import/order': ['error', {
-          'newlines-between': 'always-and-inside-groups'
+          'newlines-between': 'always-and-inside-groups',
         }],
+        'wongxy/empty-line-after-controll-flow': 'error',
       },
     },
   )
@@ -59,7 +62,9 @@ function wongxy(
     })
   }
 
-  return antfu({ ...options, react }, ...configs, ...userConfigs)
+  const plugins = { ...(options?.plugins || {}), wongxy: pluginWongxy }
+
+  return antfu({ ...options, react, plugins }, ...configs, ...userConfigs)
 }
 
 export default wongxy
