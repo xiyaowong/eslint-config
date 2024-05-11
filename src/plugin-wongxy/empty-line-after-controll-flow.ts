@@ -20,7 +20,7 @@ export default {
         if (
           !node.consequent || node.consequent.type !== 'BlockStatement') {
           const nextToken = context.sourceCode.getTokenAfter(node)
-          if (nextToken && nextToken.loc.start.line === node.loc!.end.line + 1) {
+          if (nextToken && nextToken.type !== 'Punctuator' && nextToken.loc.start.line === node.loc!.end.line + 1) {
             context.report({
               node,
               loc: {
@@ -38,7 +38,7 @@ export default {
       ForStatement(node) {
         if (!node.body || node.body.type !== 'BlockStatement') {
           const nextToken = context.sourceCode.getTokenAfter(node)
-          if (nextToken && nextToken.loc.start.line === node.loc!.end.line + 1) {
+          if (nextToken && nextToken.type !== 'Punctuator' && nextToken.loc.start.line === node.loc!.end.line + 1) {
             context.report({
               node,
               loc: {
@@ -56,7 +56,7 @@ export default {
       WhileStatement(node) {
         if (!node.body || node.body.type !== 'BlockStatement') {
           const nextToken = context.sourceCode.getTokenAfter(node)
-          if (nextToken && nextToken.loc.start.line === node.loc!.end.line + 1) {
+          if (nextToken && nextToken.type !== 'Punctuator' && nextToken.loc.start.line === node.loc!.end.line + 1) {
             context.report({
               node,
               loc: {
