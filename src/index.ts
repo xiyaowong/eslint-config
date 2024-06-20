@@ -29,6 +29,7 @@ function wongxy(
         'no-alert': 'off',
         'no-multiple-empty-lines': 'warn',
         'antfu/top-level-function': 'off',
+        'antfu/if-newline': 'off',
         'import/order': ['error', {
           'newlines-between': 'always',
         }],
