@@ -33,6 +33,7 @@ function wongxy(
         'import/order': ['error', {
           'newlines-between': 'always',
         }],
+        'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
       },
     },
   )
