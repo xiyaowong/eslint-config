@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@antfu/eslint-config':
         specifier: ^2.24.1
-        version: 2.24.1(@eslint-react/eslint-plugin@1.8.2(eslint@9.8.0)(typescript@5.4.5))(@unocss/eslint-plugin@0.61.9(eslint@9.8.0)(typescript@5.4.5))(@vue/compiler-sfc@3.4.35)(eslint-plugin-react-hooks@4.6.2(eslint@9.8.0))(eslint-plugin-react-refresh@0.4.9(eslint@9.8.0))(eslint@9.8.0)(typescript@5.4.5)
+        version: 2.24.1(@eslint-react/eslint-plugin@1.8.2(eslint@9.8.0)(typescript@5.5.4))(@unocss/eslint-plugin@0.61.9(eslint@9.8.0)(typescript@5.5.4))(@vue/compiler-sfc@3.4.35)(eslint-plugin-react-hooks@4.6.2(eslint@9.8.0))(eslint-plugin-react-refresh@0.4.9(eslint@9.8.0))(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/eslint-plugin':
         specifier: ^1.5.8
-        version: 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+        version: 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@unocss/eslint-plugin':
         specifier: '>=0.50.0'
-        version: 0.61.9(eslint@9.8.0)(typescript@5.4.5)
+        version: 0.61.9(eslint@9.8.0)(typescript@5.5.4)
       eslint-plugin-react-hooks:
         specifier: ^4.6.0
         version: 4.6.2(eslint@9.8.0)
@@ -35,13 +35,13 @@ importers:
         version: 9.8.0
       eslint-flat-config-viewer:
         specifier: ^0.1.20
-        version: 0.1.20(eslint@9.8.0)(typescript@5.4.5)
+        version: 0.1.20(eslint@9.8.0)(typescript@5.5.4)
       tsup:
         specifier: ^8.2.4
-        version: 8.2.4(jiti@1.21.6)(postcss@8.4.40)(tsx@4.16.5)(typescript@5.4.5)(yaml@2.5.0)
+        version: 8.2.4(jiti@1.21.6)(postcss@8.4.40)(tsx@4.16.5)(typescript@5.5.4)(yaml@2.5.0)
       typescript:
-        specifier: 5.4.5
-        version: 5.4.5
+        specifier: 5.5.4
+        version: 5.5.4
 
 packages:
 
@@ -2319,8 +2319,8 @@ packages:
     resolution: {integrity: sha512-ZiBujro2ohr5+Z/hZWHESLz3g08BBdrdLMieYFULJO+tWc437sn8kQsWLJoZErY8alNhxre9K4p3GURAG11n+w==}
     engines: {node: '>=16'}
 
-  typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2440,13 +2440,13 @@ packages:
 
 snapshots:
 
-  '@antfu/eslint-config@2.24.1(@eslint-react/eslint-plugin@1.8.2(eslint@9.8.0)(typescript@5.4.5))(@unocss/eslint-plugin@0.61.9(eslint@9.8.0)(typescript@5.4.5))(@vue/compiler-sfc@3.4.35)(eslint-plugin-react-hooks@4.6.2(eslint@9.8.0))(eslint-plugin-react-refresh@0.4.9(eslint@9.8.0))(eslint@9.8.0)(typescript@5.4.5)':
+  '@antfu/eslint-config@2.24.1(@eslint-react/eslint-plugin@1.8.2(eslint@9.8.0)(typescript@5.5.4))(@unocss/eslint-plugin@0.61.9(eslint@9.8.0)(typescript@5.5.4))(@vue/compiler-sfc@3.4.35)(eslint-plugin-react-hooks@4.6.2(eslint@9.8.0))(eslint-plugin-react-refresh@0.4.9(eslint@9.8.0))(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@antfu/install-pkg': 0.3.3
       '@clack/prompts': 0.7.0
-      '@stylistic/eslint-plugin': 2.6.1(eslint@9.8.0)(typescript@5.4.5)
-      '@typescript-eslint/eslint-plugin': 8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5)
-      '@typescript-eslint/parser': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@stylistic/eslint-plugin': 2.6.1(eslint@9.8.0)(typescript@5.5.4)
+      '@typescript-eslint/eslint-plugin': 8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)
+      '@typescript-eslint/parser': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
       eslint-config-flat-gitignore: 0.1.8
       eslint-flat-config-utils: 0.3.0
@@ -2454,18 +2454,18 @@ snapshots:
       eslint-plugin-antfu: 2.3.4(eslint@9.8.0)
       eslint-plugin-command: 0.2.3(eslint@9.8.0)
       eslint-plugin-eslint-comments: 3.2.0(eslint@9.8.0)
-      eslint-plugin-import-x: 3.1.0(eslint@9.8.0)(typescript@5.4.5)
+      eslint-plugin-import-x: 3.1.0(eslint@9.8.0)(typescript@5.5.4)
       eslint-plugin-jsdoc: 48.11.0(eslint@9.8.0)
       eslint-plugin-jsonc: 2.16.0(eslint@9.8.0)
       eslint-plugin-markdown: 5.1.0(eslint@9.8.0)
       eslint-plugin-n: 17.10.2(eslint@9.8.0)
       eslint-plugin-no-only-tests: 3.1.0
-      eslint-plugin-perfectionist: 3.1.1(eslint@9.8.0)(typescript@5.4.5)(vue-eslint-parser@9.4.3(eslint@9.8.0))
+      eslint-plugin-perfectionist: 3.1.1(eslint@9.8.0)(typescript@5.5.4)(vue-eslint-parser@9.4.3(eslint@9.8.0))
       eslint-plugin-regexp: 2.6.0(eslint@9.8.0)
       eslint-plugin-toml: 0.11.1(eslint@9.8.0)
       eslint-plugin-unicorn: 55.0.0(eslint@9.8.0)
-      eslint-plugin-unused-imports: 4.0.1(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)
-      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5)
+      eslint-plugin-unused-imports: 4.0.1(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)
+      eslint-plugin-vitest: 0.5.4(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)
       eslint-plugin-vue: 9.27.0(eslint@9.8.0)
       eslint-plugin-yml: 1.14.0(eslint@9.8.0)
       eslint-processor-vue-blocks: 0.1.2(@vue/compiler-sfc@3.4.35)(eslint@9.8.0)
@@ -2479,8 +2479,8 @@ snapshots:
       yaml-eslint-parser: 1.2.3
       yargs: 17.7.2
     optionalDependencies:
-      '@eslint-react/eslint-plugin': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@unocss/eslint-plugin': 0.61.9(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/eslint-plugin': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@unocss/eslint-plugin': 0.61.9(eslint@9.8.0)(typescript@5.5.4)
       eslint-plugin-react-hooks: 4.6.2(eslint@9.8.0)
       eslint-plugin-react-refresh: 0.4.9(eslint@9.8.0)
     transitivePeerDependencies:
@@ -2696,13 +2696,13 @@ snapshots:
 
   '@eslint-community/regexpp@4.11.0': {}
 
-  '@eslint-react/ast@1.8.2(eslint@9.8.0)(typescript@5.4.5)':
+  '@eslint-react/ast@1.8.2(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       birecord: 0.1.1
       remeda: 2.7.0
       string-ts: 2.2.0
@@ -2712,18 +2712,18 @@ snapshots:
       - supports-color
       - typescript
 
-  '@eslint-react/core@1.8.2(eslint@9.8.0)(typescript@5.4.5)':
+  '@eslint-react/core@1.8.2(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
-      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       remeda: 2.7.0
       short-unique-id: 5.2.0
       ts-pattern: 5.2.0
@@ -2732,36 +2732,36 @@ snapshots:
       - supports-color
       - typescript
 
-  '@eslint-react/eslint-plugin@1.8.2(eslint@9.8.0)(typescript@5.4.5)':
+  '@eslint-react/eslint-plugin@1.8.2(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
-      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
-      eslint-plugin-react-debug: 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      eslint-plugin-react-dom: 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      eslint-plugin-react-hooks-extra: 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      eslint-plugin-react-naming-convention: 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      eslint-plugin-react-x: 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      eslint-plugin-react-debug: 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      eslint-plugin-react-dom: 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      eslint-plugin-react-hooks-extra: 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      eslint-plugin-react-naming-convention: 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      eslint-plugin-react-x: 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       remeda: 2.7.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
-  '@eslint-react/jsx@1.8.2(eslint@9.8.0)(typescript@5.4.5)':
+  '@eslint-react/jsx@1.8.2(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       remeda: 2.7.0
       ts-pattern: 5.2.0
     transitivePeerDependencies:
@@ -2769,9 +2769,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@eslint-react/shared@1.8.2(eslint@9.8.0)(typescript@5.4.5)':
+  '@eslint-react/shared@1.8.2(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       picomatch: 4.0.2
     transitivePeerDependencies:
       - eslint
@@ -2780,25 +2780,25 @@ snapshots:
 
   '@eslint-react/tools@1.8.2': {}
 
-  '@eslint-react/types@1.8.2(eslint@9.8.0)(typescript@5.4.5)':
+  '@eslint-react/types@1.8.2(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@eslint-react/tools': 1.8.2
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       remeda: 2.7.0
     transitivePeerDependencies:
       - eslint
       - supports-color
       - typescript
 
-  '@eslint-react/var@1.8.2(eslint@9.8.0)(typescript@5.4.5)':
+  '@eslint-react/var@1.8.2(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       remeda: 2.7.0
     transitivePeerDependencies:
       - eslint
@@ -2949,31 +2949,31 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.2
 
-  '@stylistic/eslint-plugin-plus@2.6.1(eslint@9.8.0)(typescript@5.4.5)':
+  '@stylistic/eslint-plugin-plus@2.6.1(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@types/eslint': 9.6.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  '@stylistic/eslint-plugin-ts@2.6.1(eslint@9.8.0)(typescript@5.4.5)':
+  '@stylistic/eslint-plugin-ts@2.6.1(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@stylistic/eslint-plugin-js': 2.6.1(eslint@9.8.0)
       '@types/eslint': 9.6.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  '@stylistic/eslint-plugin@2.6.1(eslint@9.8.0)(typescript@5.4.5)':
+  '@stylistic/eslint-plugin@2.6.1(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@stylistic/eslint-plugin-js': 2.6.1(eslint@9.8.0)
       '@stylistic/eslint-plugin-jsx': 2.6.1(eslint@9.8.0)
-      '@stylistic/eslint-plugin-plus': 2.6.1(eslint@9.8.0)(typescript@5.4.5)
-      '@stylistic/eslint-plugin-ts': 2.6.1(eslint@9.8.0)(typescript@5.4.5)
+      '@stylistic/eslint-plugin-plus': 2.6.1(eslint@9.8.0)(typescript@5.5.4)
+      '@stylistic/eslint-plugin-ts': 2.6.1(eslint@9.8.0)(typescript@5.5.4)
       '@types/eslint': 9.6.0
       eslint: 9.8.0
     transitivePeerDependencies:
@@ -3002,34 +3002,34 @@ snapshots:
 
   '@types/unist@2.0.10': {}
 
-  '@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5)':
+  '@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@eslint-community/regexpp': 4.11.0
-      '@typescript-eslint/parser': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/parser': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
-      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/visitor-keys': 8.0.0
       eslint: 9.8.0
       graphemer: 1.4.0
       ignore: 5.3.1
       natural-compare: 1.4.0
-      ts-api-utils: 1.3.0(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5)':
+  '@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.0.0
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/typescript-estree': 8.0.0(typescript@5.4.5)
+      '@typescript-eslint/typescript-estree': 8.0.0(typescript@5.5.4)
       '@typescript-eslint/visitor-keys': 8.0.0
       debug: 4.3.6
       eslint: 9.8.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
@@ -3043,26 +3043,26 @@ snapshots:
       '@typescript-eslint/types': 8.0.0
       '@typescript-eslint/visitor-keys': 8.0.0
 
-  '@typescript-eslint/type-utils@7.18.0(eslint@9.8.0)(typescript@5.4.5)':
+  '@typescript-eslint/type-utils@7.18.0(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.4.5)
-      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.5.4)
+      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.5.4)
       debug: 4.3.6
       eslint: 9.8.0
-      ts-api-utils: 1.3.0(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/type-utils@8.0.0(eslint@9.8.0)(typescript@5.4.5)':
+  '@typescript-eslint/type-utils@8.0.0(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@typescript-eslint/typescript-estree': 8.0.0(typescript@5.4.5)
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/typescript-estree': 8.0.0(typescript@5.5.4)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       debug: 4.3.6
-      ts-api-utils: 1.3.0(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -3071,7 +3071,7 @@ snapshots:
 
   '@typescript-eslint/types@8.0.0': {}
 
-  '@typescript-eslint/typescript-estree@7.18.0(typescript@5.4.5)':
+  '@typescript-eslint/typescript-estree@7.18.0(typescript@5.5.4)':
     dependencies:
       '@typescript-eslint/types': 7.18.0
       '@typescript-eslint/visitor-keys': 7.18.0
@@ -3080,13 +3080,13 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.5
       semver: 7.6.3
-      ts-api-utils: 1.3.0(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/typescript-estree@8.0.0(typescript@5.4.5)':
+  '@typescript-eslint/typescript-estree@8.0.0(typescript@5.5.4)':
     dependencies:
       '@typescript-eslint/types': 8.0.0
       '@typescript-eslint/visitor-keys': 8.0.0
@@ -3095,29 +3095,29 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.5
       semver: 7.6.3
-      ts-api-utils: 1.3.0(typescript@5.4.5)
+      ts-api-utils: 1.3.0(typescript@5.5.4)
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@7.18.0(eslint@9.8.0)(typescript@5.4.5)':
+  '@typescript-eslint/utils@7.18.0(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.8.0)
       '@typescript-eslint/scope-manager': 7.18.0
       '@typescript-eslint/types': 7.18.0
-      '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.4.5)
+      '@typescript-eslint/typescript-estree': 7.18.0(typescript@5.5.4)
       eslint: 9.8.0
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  '@typescript-eslint/utils@8.0.0(eslint@9.8.0)(typescript@5.4.5)':
+  '@typescript-eslint/utils@8.0.0(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.8.0)
       '@typescript-eslint/scope-manager': 8.0.0
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/typescript-estree': 8.0.0(typescript@5.4.5)
+      '@typescript-eslint/typescript-estree': 8.0.0(typescript@5.5.4)
       eslint: 9.8.0
     transitivePeerDependencies:
       - supports-color
@@ -3161,9 +3161,9 @@ snapshots:
 
   '@unocss/core@0.61.9': {}
 
-  '@unocss/eslint-plugin@0.61.9(eslint@9.8.0)(typescript@5.4.5)':
+  '@unocss/eslint-plugin@0.61.9(eslint@9.8.0)(typescript@5.5.4)':
     dependencies:
-      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.5.4)
       '@unocss/config': 0.61.9
       '@unocss/core': 0.61.9
       magic-string: 0.30.11
@@ -3219,11 +3219,11 @@ snapshots:
       '@vue/shared': 3.4.35
       csstype: 3.1.3
 
-  '@vue/server-renderer@3.4.35(vue@3.4.35(typescript@5.4.5))':
+  '@vue/server-renderer@3.4.35(vue@3.4.35(typescript@5.5.4))':
     dependencies:
       '@vue/compiler-ssr': 3.4.35
       '@vue/shared': 3.4.35
-      vue: 3.4.35(typescript@5.4.5)
+      vue: 3.4.35(typescript@5.5.4)
 
   '@vue/shared@3.4.35': {}
 
@@ -3555,7 +3555,7 @@ snapshots:
       '@types/eslint': 9.6.0
       pathe: 1.1.2
 
-  eslint-flat-config-viewer@0.1.20(eslint@9.8.0)(typescript@5.4.5):
+  eslint-flat-config-viewer@0.1.20(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
       '@unhead/shared': 1.9.16
       '@unhead/ssr': 1.9.16
@@ -3570,7 +3570,7 @@ snapshots:
       ofetch: 1.3.4
       open: 10.1.0
       unhead: 1.9.16
-      vue: 3.4.35(typescript@5.4.5)
+      vue: 3.4.35(typescript@5.5.4)
       vue-bundle-renderer: 2.1.0
       ws: 8.18.0
     transitivePeerDependencies:
@@ -3613,9 +3613,9 @@ snapshots:
       eslint: 9.8.0
       ignore: 5.3.1
 
-  eslint-plugin-import-x@3.1.0(eslint@9.8.0)(typescript@5.4.5):
+  eslint-plugin-import-x@3.1.0(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.5.4)
       debug: 4.3.6
       doctrine: 3.0.0
       eslint: 9.8.0
@@ -3679,10 +3679,10 @@ snapshots:
 
   eslint-plugin-no-only-tests@3.1.0: {}
 
-  eslint-plugin-perfectionist@3.1.1(eslint@9.8.0)(typescript@5.4.5)(vue-eslint-parser@9.4.3(eslint@9.8.0)):
+  eslint-plugin-perfectionist@3.1.1(eslint@9.8.0)(typescript@5.5.4)(vue-eslint-parser@9.4.3(eslint@9.8.0)):
     dependencies:
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
       minimatch: 10.0.1
       natural-compare-lite: 1.4.0
@@ -3692,62 +3692,62 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-react-debug@1.8.2(eslint@9.8.0)(typescript@5.4.5):
+  eslint-plugin-react-debug@1.8.2(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
-      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
       remeda: 2.7.0
       string-ts: 2.2.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react-dom@1.8.2(eslint@9.8.0)(typescript@5.4.5):
+  eslint-plugin-react-dom@1.8.2(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
       remeda: 2.7.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react-hooks-extra@1.8.2(eslint@9.8.0)(typescript@5.4.5):
+  eslint-plugin-react-hooks-extra@1.8.2(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
-      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
       remeda: 2.7.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
@@ -3755,22 +3755,22 @@ snapshots:
     dependencies:
       eslint: 9.8.0
 
-  eslint-plugin-react-naming-convention@1.8.2(eslint@9.8.0)(typescript@5.4.5):
+  eslint-plugin-react-naming-convention@1.8.2(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
-      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
       remeda: 2.7.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
@@ -3778,24 +3778,24 @@ snapshots:
     dependencies:
       eslint: 9.8.0
 
-  eslint-plugin-react-x@1.8.2(eslint@9.8.0)(typescript@5.4.5):
+  eslint-plugin-react-x@1.8.2(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/ast': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/core': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/jsx': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/shared': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@eslint-react/tools': 1.8.2
-      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
-      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.4.5)
+      '@eslint-react/types': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
+      '@eslint-react/var': 1.8.2(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/scope-manager': 8.0.0
-      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       '@typescript-eslint/types': 8.0.0
-      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 8.0.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
-      is-immutable-type: 4.0.0(eslint@9.8.0)(typescript@5.4.5)
+      is-immutable-type: 4.0.0(eslint@9.8.0)(typescript@5.5.4)
       remeda: 2.7.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
@@ -3840,19 +3840,19 @@ snapshots:
       semver: 7.6.3
       strip-indent: 3.0.0
 
-  eslint-plugin-unused-imports@4.0.1(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0):
+  eslint-plugin-unused-imports@4.0.1(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0):
     dependencies:
       eslint: 9.8.0
       eslint-rule-composer: 0.3.0
     optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/eslint-plugin': 8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)
 
-  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5):
+  eslint-plugin-vitest@0.5.4(@typescript-eslint/eslint-plugin@8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/utils': 7.18.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
     optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.4.5))(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/eslint-plugin': 8.0.0(@typescript-eslint/parser@8.0.0(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -4187,13 +4187,13 @@ snapshots:
 
   is-hexadecimal@1.0.4: {}
 
-  is-immutable-type@4.0.0(eslint@9.8.0)(typescript@5.4.5):
+  is-immutable-type@4.0.0(eslint@9.8.0)(typescript@5.5.4):
     dependencies:
-      '@typescript-eslint/type-utils': 7.18.0(eslint@9.8.0)(typescript@5.4.5)
+      '@typescript-eslint/type-utils': 7.18.0(eslint@9.8.0)(typescript@5.5.4)
       eslint: 9.8.0
-      ts-api-utils: 1.3.0(typescript@5.4.5)
-      ts-declaration-location: 1.0.4(typescript@5.4.5)
-      typescript: 5.4.5
+      ts-api-utils: 1.3.0(typescript@5.5.4)
+      ts-declaration-location: 1.0.4(typescript@5.5.4)
+      typescript: 5.5.4
     transitivePeerDependencies:
       - supports-color
 
@@ -4803,14 +4803,14 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  ts-api-utils@1.3.0(typescript@5.4.5):
+  ts-api-utils@1.3.0(typescript@5.5.4):
     dependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
 
-  ts-declaration-location@1.0.4(typescript@5.4.5):
+  ts-declaration-location@1.0.4(typescript@5.5.4):
     dependencies:
       minimatch: 10.0.1
-      typescript: 5.4.5
+      typescript: 5.5.4
 
   ts-interface-checker@0.1.13: {}
 
@@ -4818,7 +4818,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsup@8.2.4(jiti@1.21.6)(postcss@8.4.40)(tsx@4.16.5)(typescript@5.4.5)(yaml@2.5.0):
+  tsup@8.2.4(jiti@1.21.6)(postcss@8.4.40)(tsx@4.16.5)(typescript@5.5.4)(yaml@2.5.0):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.0)
       cac: 6.7.14
@@ -4838,7 +4838,7 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.4.40
-      typescript: 5.4.5
+      typescript: 5.5.4
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -4866,7 +4866,7 @@ snapshots:
 
   type-fest@4.23.0: {}
 
-  typescript@5.4.5: {}
+  typescript@5.5.4: {}
 
   ufo@1.5.4: {}
 
@@ -4923,15 +4923,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vue@3.4.35(typescript@5.4.5):
+  vue@3.4.35(typescript@5.5.4):
     dependencies:
       '@vue/compiler-dom': 3.4.35
       '@vue/compiler-sfc': 3.4.35
       '@vue/runtime-dom': 3.4.35
-      '@vue/server-renderer': 3.4.35(vue@3.4.35(typescript@5.4.5))
+      '@vue/server-renderer': 3.4.35(vue@3.4.35(typescript@5.5.4))
       '@vue/shared': 3.4.35
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.4
 
   webidl-conversions@4.0.2: {}
 
