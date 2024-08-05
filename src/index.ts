@@ -9,51 +9,51 @@ import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 
 function wongxy(
-  options?: OptionsConfig & TypedFlatConfigItem & { reactnative?: boolean },
-  ...userConfigs: Awaitable<
-    | TypedFlatConfigItem
-    | TypedFlatConfigItem[]
-    | FlatConfigComposer<any, any>
-    | Linter.FlatConfig[]
-  >[]
+  options: OptionsConfig & TypedFlatConfigItem & { reactnative?: boolean } = {},
+  ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
-  const reactnative = options?.reactnative
-  const react = options?.react || reactnative
+  const finalOptions = { ...options, react: options.react || options.reactnative }
 
   const configs: typeof userConfigs = []
-  configs.push(
-    {
-      name: 'wongxy:general',
-      rules: {
-        'no-console': 'off',
-        'no-alert': 'off',
-        'no-multiple-empty-lines': 'warn',
-        'antfu/top-level-function': 'off',
-        'antfu/if-newline': 'off',
-        'import/order': ['error', {
-          'newlines-between': 'always',
-        }],
-        'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-      },
+
+  configs.push({
+    name: 'wongxy/general',
+    rules: {
+      'no-console': 'off',
+      'no-alert': 'off',
+      'no-multiple-empty-lines': 'warn',
+      'antfu/top-level-function': 'off',
+      'antfu/if-newline': 'off',
+      'import/order': ['error', { 'newlines-between': 'always' }],
+      'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
     },
-  )
-  if (options?.vue) {
+  })
+
+  if (options.vue) {
     configs.push({
-      name: 'wongxy:vue',
+      name: 'wongxy/vue',
       files: ['**/*.vue'],
       rules: {
         'vue/singleline-html-element-content-newline': 'off',
         'vue/valid-template-root': 'off',
-        'vue/block-order': ['warn', {
-          order: [['script', 'template'], 'style'],
-        }],
+        'vue/block-order': ['warn', { order: [['script', 'template'], 'style'] }],
         'vue/custom-event-name-casing': 'off',
       },
     })
   }
-  if (reactnative) {
+
+  if (options.react) {
     configs.push({
-      name: 'wongxy:reactnative',
+      name: 'wongxy/react',
+      rules: {
+        'react/prefer-destructuring-assignment': 'off',
+      },
+    })
+  }
+
+  if (options.reactnative) {
+    configs.push({
+      name: 'wongxy/reactnative',
       rules: {
         'ts/no-require-imports': 'off',
         'ts/no-use-before-define': 'off',
@@ -61,7 +61,7 @@ function wongxy(
     })
   }
 
-  return antfu({ ...options, react }, ...configs, ...userConfigs)
+  return antfu(finalOptions, ...configs, ...userConfigs)
 }
 
 export default wongxy
