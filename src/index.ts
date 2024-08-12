@@ -1,29 +1,15 @@
-import type {
-  Awaitable,
-  ConfigNames,
-  OptionsConfig,
-  TypedFlatConfigItem,
-} from '@antfu/eslint-config'
 import { antfu } from '@antfu/eslint-config'
 import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import { isPackageExists } from 'local-pkg'
 
-const VuePackages = [
-  'vue',
-  'nuxt',
-  'vitepress',
-  '@slidev/cli',
-]
+import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from './types'
+import { tailwindcss } from './tailwindcss'
 
-const ReactPackages = [
-  'react',
-  'react-native',
-  'react-dom',
-  'next',
-]
+const VuePackages = ['vue', 'nuxt', 'vitepress', '@slidev/cli']
+const ReactPackages = ['react', 'react-native', 'react-dom', 'next']
 
-function wongxy(
+export default function wongxy(
   options: OptionsConfig & TypedFlatConfigItem & { reactnative?: boolean } = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
@@ -33,6 +19,7 @@ function wongxy(
     typescript: options.typescript ?? isPackageExists('typescript'),
     react: (options.react || options.reactnative) ?? ReactPackages.some(i => isPackageExists(i)),
     reactnative: options.reactnative ?? isPackageExists('react-native'),
+    tailwindcss: options.tailwindcss ?? isPackageExists('tailwindcss'),
   }
 
   finalOptions.rules = {
@@ -88,9 +75,19 @@ function wongxy(
     }
   }
 
+  if (finalOptions.tailwindcss) {
+    userConfigs.splice(0, 0, tailwindcss({
+      overrides: typeof finalOptions.tailwindcss === 'object'
+        ? finalOptions.tailwindcss.overrides
+        : undefined,
+    }))
+  }
+
   delete finalOptions.reactnative
+  delete finalOptions.tailwindcss
 
   return antfu(finalOptions, ...userConfigs)
 }
 
-export default wongxy
+export { tailwindcss } from './tailwindcss'
+export * from './types'

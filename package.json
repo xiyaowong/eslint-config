@@ -16,7 +16,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --format esm,cjs --clean --dts",
+    "build": "nr typegen && tsup --format esm,cjs --clean --dts",
     "stub": "tsup --format esm",
     "dev": "tsup --format esm,cjs --watch & eslint-flat-config-viewer",
     "lint": "pnpm run stub && eslint .",
@@ -24,6 +24,7 @@
     "prepack": "pnpm run build",
     "release": "bumpp && pnpm publish",
     "preview": "eslint-flat-config-viewer",
+    "typegen": "esno scripts/typegen.ts",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -31,7 +32,8 @@
     "@unocss/eslint-plugin": ">=0.50.0",
     "eslint": ">=8.40.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.4"
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "eslint-plugin-tailwindcss": ">=3.17.4"
   },
   "dependencies": {
     "@antfu/eslint-config": "^2.24.1",
@@ -39,9 +41,12 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.0",
+    "@types/node": "^22.2.0",
     "bumpp": "^9.4.2",
     "eslint": "^9.8.0",
     "eslint-flat-config-viewer": "^0.1.20",
+    "eslint-typegen": "^0.3.0",
+    "esno": "^4.7.0",
     "tsup": "^8.2.4",
     "typescript": "5.4.5"
   }
