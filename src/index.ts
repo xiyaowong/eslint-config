@@ -10,7 +10,7 @@ const VuePackages = ['vue', 'nuxt', 'vitepress', '@slidev/cli']
 const ReactPackages = ['react', 'react-native', 'react-dom', 'next']
 
 export default function wongxy(
-  options: OptionsConfig & TypedFlatConfigItem & { reactnative?: boolean } = {},
+  options: OptionsConfig & TypedFlatConfigItem = {},
   ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
 ): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
   const finalOptions: typeof options = {

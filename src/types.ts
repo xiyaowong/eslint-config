@@ -12,21 +12,31 @@ import type {
 
 export * from '@antfu/eslint-config'
 
-interface WongxyOptionsConfig {
+export interface OptionsOverrides {
+  overrides?: TypedFlatConfigItem['rules']
+}
+export type ConfigNames = AntfuConfigNames & WongxyConfigNames
+export type TypedFlatConfigItem = AntfuTypedFlatConfigItem & MyTypedFlatConfigItem
+export type MyTypedFlatConfigItem = Omit< Linter.Config<Linter.RulesRecord & MyRuleOptions>, 'plugins' >
+export interface OptionsConfig extends AntfuOptionsConfig {
   /**
    * Enable Tailwind rules.
    *
    * @default auto-detect based on the dependencies
    */
   tailwindcss?: boolean | OptionsOverrides
+  /**
+   * Enable React Native support.
+   *
+   * Will enable `react` support automatically.
+   *
+   * @default auto-detect based on the dependencies
+   */
+  reactnative?: boolean
+  /**
+   * Enable react rules.
+   *
+   * @default auto-detect based on the dependencies
+   */
+  react?: boolean | OptionsOverrides
 }
-
-export interface OptionsOverrides {
-  overrides?: TypedFlatConfigItem['rules']
-}
-
-export type OptionsConfig = WongxyOptionsConfig & AntfuOptionsConfig
-export type ConfigNames = WongxyConfigNames & AntfuConfigNames
-export type TypedFlatConfigItem = MyTypedFlatConfigItem & AntfuTypedFlatConfigItem
-export type MyTypedFlatConfigItem = Omit< Linter.Config<Linter.RulesRecord & MyRuleOptions>, 'plugins' >
-export type { Awaitable } from '@antfu/eslint-config'
