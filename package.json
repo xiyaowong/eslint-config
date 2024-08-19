@@ -36,16 +36,16 @@
     "eslint-plugin-tailwindcss": ">=3.17.4"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^2.24.1",
+    "@antfu/eslint-config": "^2.26.0",
     "local-pkg": "^0.5.0"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.0",
-    "@types/node": "^22.2.0",
-    "bumpp": "^9.4.2",
-    "eslint": "^9.8.0",
+    "@types/node": "^22.4.1",
+    "bumpp": "^9.5.1",
+    "eslint": "^9.9.0",
     "eslint-flat-config-viewer": "^0.1.20",
-    "eslint-typegen": "^0.3.0",
+    "eslint-typegen": "^0.3.1",
     "esno": "^4.7.0",
     "tsup": "^8.2.4",
     "typescript": "5.4.5"
