@@ -22,7 +22,8 @@ export default function wongxy(
     tailwindcss: options.tailwindcss ?? isPackageExists('tailwindcss'),
   }
 
-  finalOptions.rules = {
+  // Do not use `rules` in `options` as it will conflict with `ignores`
+  const rules: TypedFlatConfigItem['rules'] = {
     'no-console': 'off',
     'no-alert': 'off',
     'no-multiple-empty-lines': 'warn',
@@ -30,8 +31,10 @@ export default function wongxy(
     'antfu/if-newline': 'off',
     'import/order': ['error', { 'newlines-between': 'always' }],
     'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-    ...finalOptions.rules,
   }
+  for (const key in finalOptions.rules)
+    delete rules[key]
+  userConfigs.splice(0, 0, { name: 'wongxy/rules', rules })
 
   if (finalOptions.vue) {
     const vue = typeof finalOptions.vue === 'object' ? finalOptions.vue : {}
