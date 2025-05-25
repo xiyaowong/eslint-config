@@ -1,18 +1,16 @@
-import { antfu } from '@antfu/eslint-config'
 import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import { isPackageExists } from 'local-pkg'
-
 import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from './types'
+import { antfu } from '@antfu/eslint-config'
+
+import { isPackageExists } from 'local-pkg'
 import { tailwindcss } from './tailwindcss'
 
 const VuePackages = ['vue', 'nuxt', 'vitepress', '@slidev/cli']
 const ReactPackages = ['react', 'react-native', 'react-dom', 'next']
 
-export default function wongxy(
-  options: OptionsConfig & TypedFlatConfigItem = {},
-  ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]
-): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
+export default function wongxy(options?: OptionsConfig & Omit<TypedFlatConfigItem, 'files'>, ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
+  options = options ?? {}
   const finalOptions: typeof options = {
     ...options,
     vue: options.vue ?? VuePackages.some(i => isPackageExists(i)),
@@ -29,7 +27,7 @@ export default function wongxy(
     'no-multiple-empty-lines': 'warn',
     'antfu/top-level-function': 'off',
     'antfu/if-newline': 'off',
-    'import/order': ['error', { 'newlines-between': 'always' }],
+    // 'import/order': ['error', { 'newlines-between': 'always' }],
     'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
   }
   for (const key in finalOptions.rules)
@@ -89,7 +87,7 @@ export default function wongxy(
   delete finalOptions.reactnative
   delete finalOptions.tailwindcss
 
-  return antfu(finalOptions, ...userConfigs)
+  return antfu(finalOptions, ...(userConfigs as any)) as any
 }
 
 export { tailwindcss } from './tailwindcss'

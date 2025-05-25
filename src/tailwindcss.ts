@@ -1,8 +1,7 @@
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
-// @ts-expect-error no types
-import pluginTailwind from 'eslint-plugin-tailwindcss'
-
 import type { OptionsOverrides } from './types'
+
+import pluginTailwind from 'eslint-plugin-tailwindcss'
 
 export async function tailwindcss(options?: OptionsOverrides): Promise<TypedFlatConfigItem[]> {
   const { overrides = {} } = options ?? {}

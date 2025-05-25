@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 
-import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 import { combine } from '@antfu/eslint-config'
+import { flatConfigsToRulesDTS } from 'eslint-typegen/core'
 
 import { tailwindcss } from '../src/tailwindcss'
 
