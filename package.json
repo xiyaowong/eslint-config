@@ -42,12 +42,12 @@
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "@types/eslint-plugin-tailwindcss": "3.17.0",
-    "@types/node": "^22.15.21",
+    "@types/node": "^24.0.10",
     "bumpp": "^10.1.1",
     "eslint": "^9.27.0",
     "eslint-typegen": "^2.2.0",
     "esno": "^4.8.0",
     "tsup": "^8.5.0",
-    "typescript": "5.4.5"
+    "typescript": "5.8.3"
   }
 }
