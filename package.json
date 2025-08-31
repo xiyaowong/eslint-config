@@ -16,10 +16,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "nr typegen && tsup --format esm,cjs --clean --dts",
-    "stub": "tsup --format esm",
-    "dev": "tsup --format esm,cjs --watch & eslint-flat-config-viewer",
+    "build": "nr typegen && tsdown --clean --dts",
+    "stub": "tsdown --format esm",
+    "watch": "tsdown --watch",
     "lint": "pnpm run stub && eslint .",
+    "dev": "tsdown --watch & eslint-flat-config-viewer",
     "lint:fix": "pnpm run stub && eslint . --fix",
     "prepack": "pnpm run build",
     "release": "bumpp && pnpm publish",
@@ -36,18 +37,19 @@
     "eslint-plugin-tailwindcss": ">=3.18.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^4.13.2",
-    "local-pkg": "^1.1.1"
+    "@antfu/eslint-config": "^5.2.1",
+    "eslint-flat-config-utils": "^2.1.1",
+    "local-pkg": "^1.1.2"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "@types/eslint-plugin-tailwindcss": "3.17.0",
-    "@types/node": "^22.15.21",
-    "bumpp": "^10.1.1",
-    "eslint": "^9.27.0",
-    "eslint-typegen": "^2.2.0",
+    "@types/node": "^24.3.0",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.34.0",
+    "eslint-typegen": "^2.3.0",
     "esno": "^4.8.0",
-    "tsup": "^8.5.0",
-    "typescript": "5.4.5"
+    "tsdown": "^0.14.2",
+    "typescript": "5.9.2"
   }
 }

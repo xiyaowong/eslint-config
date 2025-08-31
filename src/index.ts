@@ -1,8 +1,8 @@
 import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import type { Awaitable, ConfigNames, OptionsConfig, TypedFlatConfigItem } from './types'
-import { antfu } from '@antfu/eslint-config'
 
+import { antfu } from '@antfu/eslint-config'
 import { isPackageExists } from 'local-pkg'
 import { tailwindcss } from './tailwindcss'
 
@@ -30,6 +30,7 @@ export default function wongxy(options?: OptionsConfig & Omit<TypedFlatConfigIte
     // 'import/order': ['error', { 'newlines-between': 'always' }],
     'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
   }
+  // Remove user custom rules
   for (const key in finalOptions.rules)
     delete rules[key]
   userConfigs.splice(0, 0, { name: 'wongxy/rules', rules })
