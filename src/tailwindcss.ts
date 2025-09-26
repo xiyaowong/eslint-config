@@ -1,13 +1,22 @@
 import type { TypedFlatConfigItem } from '@antfu/eslint-config'
-import type { OptionsOverrides } from './types'
+import type { OptionsTailwindCSS, RuleOptionsTailwindCSS } from './types'
+import pluginTailwind from 'eslint-plugin-better-tailwindcss'
 
-import pluginTailwind from 'eslint-plugin-tailwindcss'
+export async function tailwindcss(options: OptionsTailwindCSS = {}): Promise<TypedFlatConfigItem[]> {
+  const { overrides = {}, ...settings } = options
 
-export async function tailwindcss(options?: OptionsOverrides): Promise<TypedFlatConfigItem[]> {
-  const { overrides = {} } = options ?? {}
+  const rules: RuleOptionsTailwindCSS = {
+    'tw/enforce-consistent-class-order': 'warn',
+    'tw/enforce-consistent-line-wrapping': ['warn', { printWidth: 100 }],
+    'tw/no-duplicate-classes': 'warn',
+    'tw/no-unnecessary-whitespace': 'warn',
+    'tw/no-conflicting-classes': 'warn',
+    'tw/no-unregistered-classes': 'warn',
+  }
+
   return [
     {
-      name: 'wongxy/tailwindcss',
+      name: 'wongxy/tailwindcss/setup',
       plugins: {
         tw: pluginTailwind,
       },
@@ -18,15 +27,16 @@ export async function tailwindcss(options?: OptionsOverrides): Promise<TypedFlat
           },
         },
       },
+      ...(Object.keys(settings).length > 0 && {
+        settings: {
+          'better-tailwindcss': settings,
+        },
+      }),
+    },
+    {
+      name: 'wongxy/tailwindcss/rules',
       rules: {
-        'tw/classnames-order': 'warn',
-        'tw/enforces-negative-arbitrary-values': 'warn',
-        'tw/enforces-shorthand': 'warn',
-        'tw/migration-from-tailwind-2': 'warn',
-        'tw/no-arbitrary-value': 'off',
-        // 'tw/no-custom-classname': 'warn',
-        'tw/no-contradicting-classname': 'error',
-        // 'tw/no-unnecessary-arbitrary-value': 'warn',
+        ...rules,
         ...overrides,
       },
     },

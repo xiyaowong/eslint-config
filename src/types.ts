@@ -1,34 +1,13 @@
-import type {
-  ConfigNames as AntfuConfigNames,
-  OptionsConfig as AntfuOptionsConfig,
-  Rules as AntfuRules,
-  TypedFlatConfigItem as AntfuTypedFlatConfigItem,
-} from '@antfu/eslint-config'
-import type { Linter } from 'eslint'
+import type { antfu, OptionsOverrides } from '@antfu/eslint-config'
+import type { RuleOptions } from './typegen'
 
-import type {
-  RuleOptions as MyRuleOptions,
-  ConfigNames as WongxyConfigNames,
-} from './typegen'
-
-export * from '@antfu/eslint-config'
-
-interface OptionsOverrides {
-  overrides?: TypedFlatConfigItem['rules']
-}
-export type ConfigNames = AntfuConfigNames & WongxyConfigNames
-export type TypedFlatConfigItem = AntfuTypedFlatConfigItem & MyTypedFlatConfigItem
-interface MyRules extends MyRuleOptions {}
-interface Rules extends MyRules, AntfuRules {}
-export type MyTypedFlatConfigItem = Omit<Linter.Config<Linter.RulesRecord & Rules>, 'plugins'> & { plugins?: Record<string, any> }
-
-export interface OptionsConfig extends AntfuOptionsConfig {
+export type Options = Parameters<typeof antfu>[0] & {
   /**
    * Enable Tailwind rules.
    *
    * @default auto-detect based on the dependencies
    */
-  tailwindcss?: boolean | OptionsOverrides
+  tailwindcss?: boolean | OptionsTailwindCSS
   /**
    * Enable React Native support.
    *
@@ -43,4 +22,18 @@ export interface OptionsConfig extends AntfuOptionsConfig {
    * @default auto-detect based on the dependencies
    */
   react?: boolean | OptionsOverrides
+}
+
+export type UserConfig = Parameters<typeof antfu>[1] & { rules?: RuleOptions }
+export type OptionsReturn = ReturnType<typeof antfu>
+
+export type PickKeysByPrefix<T extends object, P extends string> = {
+  [K in keyof T as K extends `${P}${string}` ? K : never]: T[K];
+}
+
+export type RuleOptionsTailwindCSS = PickKeysByPrefix<RuleOptions, 'tw/'>
+
+export interface OptionsTailwindCSS {
+  entryPoint?: string
+  overrides?: Partial<RuleOptionsTailwindCSS>
 }

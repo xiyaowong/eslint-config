@@ -19,12 +19,12 @@
     "build": "nr typegen && tsdown --clean --dts",
     "stub": "tsdown --format esm",
     "watch": "tsdown --watch",
-    "lint": "pnpm run stub && eslint .",
     "dev": "tsdown --watch & eslint-flat-config-viewer",
-    "lint:fix": "pnpm run stub && eslint . --fix",
+    "lint:fix": "eslint . --fix",
+    "lint": "eslint .",
     "prepack": "pnpm run build",
     "release": "bumpp && pnpm publish",
-    "inspect": "pnpm build && npx @eslint/config-inspector",
+    "inspect": "nlx @eslint/config-inspector",
     "typegen": "esno scripts/typegen.ts",
     "typecheck": "tsc --noEmit"
   },
@@ -33,9 +33,9 @@
     "@next/eslint-plugin-next": "^15.5.2",
     "@unocss/eslint-plugin": "^66.1.2",
     "eslint": "^9.27.0",
+    "eslint-plugin-better-tailwindcss": "^3.7.9",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "eslint-plugin-tailwindcss": ">=3.18.0"
+    "eslint-plugin-react-refresh": "^0.4.20"
   },
   "dependencies": {
     "@antfu/eslint-config": "^5.2.1",
@@ -43,8 +43,8 @@
     "local-pkg": "^1.1.2"
   },
   "devDependencies": {
+    "@antfu/ni": "^26.0.1",
     "@types/eslint": "^9.6.1",
-    "@types/eslint-plugin-tailwindcss": "3.17.0",
     "@types/node": "^24.3.0",
     "bumpp": "^10.2.3",
     "eslint": "^9.34.0",
