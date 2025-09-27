@@ -31,6 +31,7 @@ export default function wongxy(options: Options = {}, ...userConfigs: UserConfig
       'antfu/top-level-function': 'off',
       'antfu/if-newline': 'off',
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
+      'perfectionist/sort-jsx-props': ['warn', { order: 'asc', type: 'natural' }],
     }),
   })
 
