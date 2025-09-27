@@ -3,7 +3,7 @@ import type { OptionsTailwindCSS, RuleOptionsTailwindCSS } from './types'
 import pluginTailwind from 'eslint-plugin-better-tailwindcss'
 
 export async function tailwindcss(options: OptionsTailwindCSS = {}): Promise<TypedFlatConfigItem[]> {
-  const { overrides = {}, ...settings } = options
+  const { overrides = {}, settings } = options
 
   const rules: RuleOptionsTailwindCSS = {
     'tw/enforce-consistent-class-order': 'warn',
@@ -27,7 +27,7 @@ export async function tailwindcss(options: OptionsTailwindCSS = {}): Promise<Typ
           },
         },
       },
-      ...(Object.keys(settings).length > 0 && {
+      ...(!!settings && {
         settings: {
           'better-tailwindcss': settings,
         },

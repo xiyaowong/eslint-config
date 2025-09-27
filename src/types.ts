@@ -34,6 +34,13 @@ export type PickKeysByPrefix<T extends object, P extends string> = {
 export type RuleOptionsTailwindCSS = PickKeysByPrefix<RuleOptions, 'tw/'>
 
 export interface OptionsTailwindCSS {
-  entryPoint?: string
   overrides?: Partial<RuleOptionsTailwindCSS>
+  settings?: {
+    entryPoint?: string
+    tailwindConfig?: string
+    attributes?: string[]
+    callees?: string[]
+    variables?: string[]
+    tags?: string[]
+  }
 }
