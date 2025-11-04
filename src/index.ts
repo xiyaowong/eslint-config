@@ -31,7 +31,16 @@ export default function wongxy(options: Options = {}, ...userConfigs: UserConfig
       'antfu/top-level-function': 'off',
       'antfu/if-newline': 'off',
       'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
-      'perfectionist/sort-jsx-props': ['warn', { order: 'asc', type: 'natural' }],
+      'perfectionist/sort-jsx-props': ['warn', {
+        order: 'asc',
+        type: 'natural',
+        groups: ['reserved-first', 'reserved-second', 'unknown', 'reserved-last'],
+        customGroups: {
+          'reserved-first': ['key', 'ref'],
+          'reserved-second': ['id', 'name'],
+          'reserved-last': ['asChild'],
+        },
+      }],
     }),
   })
 
