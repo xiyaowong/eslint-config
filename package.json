@@ -48,7 +48,7 @@
     "eslint": "^9.39.1",
     "eslint-typegen": "^2.3.0",
     "esno": "^4.8.0",
-    "tsdown": "^0.15.12",
+    "tsdown": "^0.16.1",
     "typescript": "^5.9.3"
   }
 }
