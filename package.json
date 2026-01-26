@@ -36,8 +36,8 @@
     "eslint-plugin-react-refresh": "^0.4.24"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^6.2.0",
-    "eslint-flat-config-utils": "^2.1.4",
+    "@antfu/eslint-config": "^7.2.0",
+    "eslint-flat-config-utils": "^3.0.0",
     "local-pkg": "^1.1.2"
   },
   "devDependencies": {
