@@ -35,11 +35,20 @@ export default function wongxy(options: Options = {}, ...userConfigs: UserConfig
         order: 'asc',
         type: 'natural',
         groups: ['reserved-first', 'reserved-second', 'unknown', 'reserved-last'],
-        customGroups: {
-          'reserved-first': ['key', 'ref'],
-          'reserved-second': ['id', 'name'],
-          'reserved-last': ['asChild'],
-        },
+        customGroups: [
+          {
+            groupName: 'reserved-first',
+            elementNamePattern: ['key', 'ref'],
+          },
+          {
+            groupName: 'reserved-second',
+            elementNamePattern: ['id', 'name'],
+          },
+          {
+            groupName: 'reserved-last',
+            elementNamePattern: ['asChild'],
+          },
+        ],
       }],
     }),
   })

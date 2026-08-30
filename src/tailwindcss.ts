@@ -11,7 +11,7 @@ export async function tailwindcss(options: OptionsTailwindCSS = {}): Promise<Typ
     'tw/no-duplicate-classes': 'warn',
     'tw/no-unnecessary-whitespace': 'warn',
     'tw/no-conflicting-classes': 'warn',
-    'tw/no-unregistered-classes': 'warn',
+    'tw/no-unknown-classes': 'warn',
   }
 
   return [
