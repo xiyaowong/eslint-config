@@ -1,4 +1,4 @@
-import type { antfu, OptionsConfig, OptionsOverrides, TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { antfu, Awaitable, OptionsConfig, OptionsOverrides, TypedFlatConfigItem } from '@antfu/eslint-config'
 import type { RuleOptions } from './typegen'
 
 export type Options = OptionsConfig & Omit<TypedFlatConfigItem, 'files' | 'ignores'> & {
@@ -24,7 +24,7 @@ export type Options = OptionsConfig & Omit<TypedFlatConfigItem, 'files' | 'ignor
   react?: boolean | OptionsOverrides
 }
 
-export type UserConfig = Parameters<typeof antfu>[1] & { rules?: RuleOptions }
+export type UserConfig = Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[]> & { rules?: RuleOptions }
 export type OptionsReturn = ReturnType<typeof antfu>
 
 export type PickKeysByPrefix<T extends object, P extends string> = {

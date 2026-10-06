@@ -121,7 +121,7 @@ export default function wongxy(options: Options = {}, ...userConfigs: UserConfig
   }
 
   if (enableTailwind) {
-    configs.push(tailwindcss(tailwindOptions, globalRules))
+    configs.push(tailwindcss(tailwindOptions))
   }
 
   return antfu(options, ...configs, ...userConfigs)
