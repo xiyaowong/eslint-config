@@ -1,7 +1,7 @@
-import type { antfu, OptionsOverrides } from '@antfu/eslint-config'
+import type { antfu, Awaitable, OptionsConfig, OptionsOverrides, TypedFlatConfigItem } from '@antfu/eslint-config'
 import type { RuleOptions } from './typegen'
 
-export type Options = Parameters<typeof antfu>[0] & {
+export type Options = OptionsConfig & Omit<TypedFlatConfigItem, 'files' | 'ignores'> & {
   /**
    * Enable Tailwind rules.
    *
@@ -15,7 +15,7 @@ export type Options = Parameters<typeof antfu>[0] & {
    *
    * @default auto-detect based on the dependencies
    */
-  reactnative?: boolean
+  reactnative?: boolean | OptionsOverrides
   /**
    * Enable react rules.
    *
@@ -24,7 +24,7 @@ export type Options = Parameters<typeof antfu>[0] & {
   react?: boolean | OptionsOverrides
 }
 
-export type UserConfig = Parameters<typeof antfu>[1] & { rules?: RuleOptions }
+export type UserConfig = Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[]> & { rules?: RuleOptions }
 export type OptionsReturn = ReturnType<typeof antfu>
 
 export type PickKeysByPrefix<T extends object, P extends string> = {
