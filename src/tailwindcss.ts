@@ -1,8 +1,8 @@
-import type { TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { Rules, TypedFlatConfigItem } from '@antfu/eslint-config'
 import type { OptionsTailwindCSS, RuleOptionsTailwindCSS } from './types'
 import pluginTailwind from 'eslint-plugin-better-tailwindcss'
 
-export async function tailwindcss(options: OptionsTailwindCSS = {}): Promise<TypedFlatConfigItem[]> {
+export async function tailwindcss(options: OptionsTailwindCSS = {}, globalRules: Rules = {}): Promise<TypedFlatConfigItem[]> {
   const { overrides = {}, settings } = options
 
   const rules: RuleOptionsTailwindCSS = {
@@ -13,6 +13,9 @@ export async function tailwindcss(options: OptionsTailwindCSS = {}): Promise<Typ
     'tw/no-conflicting-classes': 'warn',
     'tw/no-unknown-classes': 'warn',
   }
+  const defaultRules = Object.fromEntries(
+    Object.entries(rules).filter(([rule]) => !(rule in globalRules)),
+  ) as RuleOptionsTailwindCSS
 
   return [
     {
@@ -36,7 +39,7 @@ export async function tailwindcss(options: OptionsTailwindCSS = {}): Promise<Typ
     {
       name: 'wongxy/tailwindcss/rules',
       rules: {
-        ...rules,
+        ...defaultRules,
         ...overrides,
       },
     },
